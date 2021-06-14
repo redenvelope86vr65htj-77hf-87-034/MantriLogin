@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Trova </title>
+    <link rel="stylesheet" href='index.css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </script>
+   </head>
+
+
+<body>
+  <div class="topnav">
+    <h1>Login</h1>
+  </div class="responsive">
+    <form id="submit-form" action="">
+      <div class="input_box">
+        <input type="text" id="fname" name="name" placeholder="Email or Phone" required>
+        <div class="icon"><i class="fas fa-user"></i></div>
+      </div>
+      <div class="input_box">
+        <input type="password" id="lname" name="email" placeholder="Password" required>
+        <div class="icon"><i class="fas fa-lock"></i></div>
+      </div>
+      
+     <div style="text-align: center;">
+        <input  class="btt" type="submit" value="Login">
+      </div>
+      <div class="downn" >
+        <img style=" align-items: center; position: relative; " src="down.jpg" alt=""  class="responsive">
+      </div>
+     
+    </form>
+    <script>
+      $("#submit-form").submit((e)=>{
+          e.preventDefault()
+          $.ajax({
+              url:"",
+              data:$("#submit-form").serialize(),
+              method:"post",
+              success:function (response){
+                  window.location.href=""
+              },
+              error:function (err){
+                  alert("Something Error")
+  
+              }
+          })
+      })
+  </script>
+</body>
+</html>
